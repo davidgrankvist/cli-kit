@@ -1,4 +1,6 @@
-﻿namespace CliKit.Test
+﻿using CliKit.Lib;
+
+namespace CliKit.Test
 {
 	public class Args
 	{

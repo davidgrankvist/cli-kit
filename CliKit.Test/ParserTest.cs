@@ -75,5 +75,47 @@ namespace CliKit.Test
 			};
 			yield return new object[] { args, parsedArgs, message };
 		}
+
+		private class TestParseAction
+		{
+			public int ComputedSum { get; set; } = 0;
+
+			[CliArg("first", "f")]
+			public int First { get; set; }
+
+			[CliArg("second", "s")]
+			public int Second { get; set; }
+
+			[CliAction]
+			public void ComputeSum()
+			{
+				ComputedSum = First + Second;
+			}
+		}
+
+		[TestMethod]
+		public void TestParseArgsWithAction()
+		{
+			var args = new string[]
+			{
+				"--first", "100",
+				"--second", "50"
+			};
+			var (parsedArgs, action) = ArgParser.ParseWithAction<TestParseAction>(args);
+			action?.Invoke();
+
+			Assert.IsNotNull(action);
+			Assert.AreEqual(150, parsedArgs.ComputedSum);
+		}
+
+		private class TestEmpty { }
+
+		[TestMethod]
+		public void TestParseEmptyAction()
+		{
+			var (_, action) = ArgParser.ParseWithAction<TestEmpty>(new string[] { });
+
+			Assert.IsNull(action);
+		}
 	}
 }
