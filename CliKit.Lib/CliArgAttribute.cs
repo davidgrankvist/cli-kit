@@ -8,8 +8,8 @@
 
 		public CliArgAttribute(string name, string abbrevName)
         {
-            this.Name = name;
-            this.AbbrevName = abbrevName;
+            Name = name;
+            AbbrevName = abbrevName;
 		}
 	}
 }

@@ -6,21 +6,10 @@ namespace CliKit.Dev
 	{
 		static void Main(string[] args)
 		{
-			var testArgs = new string[]
-			{
-				"--count", "5",
-				"--name", "Bob",
-				"--flag",
-			};
-			var (parsedArgs, action) = ArgParser.ParseWithAction<Args>(testArgs);
+			var (parsedArgs, action) = ArgParser.ParseWithAction<Args>(args);
 
 			Console.WriteLine($"Parsed args: {parsedArgs}");
-
-			if (action != null)
-			{
-				action();
-			}
-
+			action?.Invoke();
 		}
 	}
 }
