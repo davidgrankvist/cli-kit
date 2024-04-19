@@ -47,7 +47,7 @@ namespace CliKit.Lib
 			 * Loop through the given args and set the corresponding props
 			 */
 			PropertyInfo? nextInfo = null;
-			for (int i = 1; i < args.Length; i++)
+			for (int i = 0; i < args.Length; i++)
 			{
 				var curr = args[i];
 

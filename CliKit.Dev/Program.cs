@@ -8,7 +8,6 @@ namespace CliKit.Dev
 		{
 			var testArgs = new string[]
 			{
-				"nameOfTheProgram",
 				"--count", "5",
 				"--name", "Bob",
 				"--flag",
@@ -22,6 +21,6 @@ namespace CliKit.Dev
 				action();
 			}
 
-        }
+		}
 	}
 }

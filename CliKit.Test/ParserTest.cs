@@ -22,7 +22,6 @@ namespace CliKit.Test
 			message = "Set all";
 			args = new string[]
 			{
-				"nameOfTheProgram",
 				"--count", "5",
 				"--name", "Bob",
 				"--flag",
@@ -38,7 +37,6 @@ namespace CliKit.Test
 			message = "Skip all";
 			args = new string[]
 			{
-				"nameOfTheProgram",
 			};
 			parsedArgs = new Args
 			{
@@ -51,7 +49,6 @@ namespace CliKit.Test
 			message = "Set all, reordered";
 			args = new string[]
 			{
-				"nameOfTheProgram",
 				"--name", "Bob",
 				"--flag",
 				"--count", "5",
@@ -67,7 +64,6 @@ namespace CliKit.Test
 			message = "Provide a name without its value";
 			args = new string[]
 			{
-				"nameOfTheProgram",
 				"--count",
 				"--name","Bob",
 			};
