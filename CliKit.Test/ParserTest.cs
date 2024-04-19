@@ -9,7 +9,7 @@ namespace CliKit.Test
 		[DynamicData(nameof(TestData), DynamicDataSourceType.Method)]
 		public void TestParseArgs(string[] args, Args expected, string message)
 		{
-			var parsedArgs = Parser.Parse<Args>(args);
+			var parsedArgs = ArgParser.Parse<Args>(args);
 			Assert.AreEqual(expected, parsedArgs, message);
 		}
 

@@ -13,7 +13,7 @@ namespace CliKit.Dev
 				"--name", "Bob",
 				"--flag",
 			};
-			var (parsedArgs, action) = Parser.ParseWithAction<Args>(testArgs);
+			var (parsedArgs, action) = ArgParser.ParseWithAction<Args>(testArgs);
 
 			Console.WriteLine($"Parsed args: {parsedArgs}");
 

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CliKit\CliKit.Lib.csproj" />
+    <ProjectReference Include="..\CliKit.Lib\CliKit.Lib.csproj" />
   </ItemGroup>
 
 </Project>

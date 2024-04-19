@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CliKit.Lib
 {
-	public static class Parser
+	public static class ArgParser
 	{
 
 		public static T Parse<T>(string[] args)
