@@ -11,7 +11,13 @@ namespace CliKit.Dev
 		public string? Name { get; set; }
 
 		[CliArg("flag", "f")]
-        public bool Flag { get; set; }
+		public bool Flag { get; set; }
+
+		[CliAction]
+		public void DoThing()
+		{
+			Console.WriteLine("Called Args.DoThing");
+		}
 
 		public override string ToString()
 		{
